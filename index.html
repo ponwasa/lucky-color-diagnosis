@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ラッキーカラー診断</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8">
+          <div class="card p-4">
+            <div class="card-body text-center">
+              <h1 class="mb-4">誕生日からわかるラッキーカラー診断</h1>
+              <p class="text-muted mb-4">
+                ☆占いたい人の名前と誕生日を入れてください☆
+              </p>
+
+              <form id="luckyColorForm">
+                <div class="mb-3">
+                  <label for="name" class="form-label">名前</label>
+                  <input type="text" class="form-control" id="name" required />
+                </div>
+
+                <div class="mb-4">
+                  <label class="form-label">誕生日</label>
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="birthday"
+                    required
+                  />
+                </div>
+
+                <button type="submit" class="btn btn-primary">占う</button>
+              </form>
+
+              <div id="result" class="color-result mt-5">
+                <div class="color-circle" id="colorCircle"></div>
+                <h3 id="resultText" class="text-primary mb-3"></h3>
+                <div class="alert alert-info" id="colorMessage"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
